@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_weight="1"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:text="EsemkaPetition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:text="sign in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_gravity="start"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Email Addres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:hint="Email Address"
+        android:layout_marginTop="12dp"
+        android:id="@+id/Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_gravity="start"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="12dp"
+        android:text="Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:layout_marginBottom="50dp"
+        android:hint="Password"
+        android:layout_marginTop="12dp"
+        android:id="@+id/password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <Button
+            android:backgroundTint="@color/Singn"
+            android:id="@+id/btn_singn"
+            android:layout_marginHorizontal="30dp"
+            android:text="Singn in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:text="or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:backgroundTint="@color/SingnUp"
+            android:id="@+id/btn_singnup"
+            android:layout_marginHorizontal="30dp"
+            android:text="Singn up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

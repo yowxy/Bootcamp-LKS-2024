@@ -1,0 +1,15 @@
+D:\LKS\EsemkaCinema\EsemkaCinema\bin\Debug\EsemkaCinema.exe.config
+D:\LKS\EsemkaCinema\EsemkaCinema\bin\Debug\EsemkaCinema.exe
+D:\LKS\EsemkaCinema\EsemkaCinema\bin\Debug\EsemkaCinema.pdb
+D:\LKS\EsemkaCinema\EsemkaCinema\bin\Debug\EntityFramework.dll
+D:\LKS\EsemkaCinema\EsemkaCinema\bin\Debug\EntityFramework.SqlServer.dll
+D:\LKS\EsemkaCinema\EsemkaCinema\bin\Debug\EntityFramework.xml
+D:\LKS\EsemkaCinema\EsemkaCinema\bin\Debug\EntityFramework.SqlServer.xml
+D:\LKS\EsemkaCinema\EsemkaCinema\obj\Debug\EsemkaCinema.csproj.AssemblyReference.cache
+D:\LKS\EsemkaCinema\EsemkaCinema\obj\Debug\EsemkaCinema.Form1.resources
+D:\LKS\EsemkaCinema\EsemkaCinema\obj\Debug\EsemkaCinema.Properties.Resources.resources
+D:\LKS\EsemkaCinema\EsemkaCinema\obj\Debug\EsemkaCinema.csproj.GenerateResource.cache
+D:\LKS\EsemkaCinema\EsemkaCinema\obj\Debug\EsemkaCinema.csproj.CoreCompileInputs.cache
+D:\LKS\EsemkaCinema\EsemkaCinema\obj\Debug\EsemkaCinema.csproj.CopyComplete
+D:\LKS\EsemkaCinema\EsemkaCinema\obj\Debug\EsemkaCinema.exe
+D:\LKS\EsemkaCinema\EsemkaCinema\obj\Debug\EsemkaCinema.pdb

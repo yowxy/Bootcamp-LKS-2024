@@ -1,0 +1,6 @@
+@Web_API_LKS_HostAddress = http://localhost:5007
+
+GET {{Web_API_LKS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

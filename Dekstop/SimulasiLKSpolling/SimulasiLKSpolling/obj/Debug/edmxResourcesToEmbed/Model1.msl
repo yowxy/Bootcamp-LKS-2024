@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EsemkaPollingModelStoreContainer" CdmEntityContainer="EsemkaPollingEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="EsemkaPollingModel.Admin">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PollOptions">
+      <EntityTypeMapping TypeName="EsemkaPollingModel.PollOption">
+        <MappingFragment StoreEntitySet="PollOptions">
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="PollID" ColumnName="PollID" />
+          <ScalarProperty Name="OptionText" ColumnName="OptionText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PollResponses">
+      <EntityTypeMapping TypeName="EsemkaPollingModel.PollRespons">
+        <MappingFragment StoreEntitySet="PollResponses">
+          <ScalarProperty Name="ResponseID" ColumnName="ResponseID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PollID" ColumnName="PollID" />
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="RespondedAt" ColumnName="RespondedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Polls">
+      <EntityTypeMapping TypeName="EsemkaPollingModel.Poll">
+        <MappingFragment StoreEntitySet="Polls">
+          <ScalarProperty Name="PollID" ColumnName="PollID" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="IsClosed" ColumnName="IsClosed" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="EsemkaPollingModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="IdentityCode" ColumnName="IdentityCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

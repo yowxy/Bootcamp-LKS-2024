@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EsemkaPollingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Polls" Relationship="Self.FK__Polls__AdminID__29572725" FromRole="Admins" ToRole="Polls" />
+  </EntityType>
+  <EntityType Name="PollOption">
+    <Key>
+      <PropertyRef Name="OptionID" />
+    </Key>
+    <Property Name="OptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PollID" Type="Int32" />
+    <Property Name="OptionText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Poll" Relationship="Self.FK__PollOptio__PollI__2C3393D0" FromRole="PollOptions" ToRole="Polls" />
+    <NavigationProperty Name="PollResponses" Relationship="Self.FK__PollRespo__Optio__30F848ED" FromRole="PollOptions" ToRole="PollResponses" />
+  </EntityType>
+  <EntityType Name="PollRespons">
+    <Key>
+      <PropertyRef Name="ResponseID" />
+    </Key>
+    <Property Name="ResponseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="PollID" Type="Int32" />
+    <Property Name="OptionID" Type="Int32" />
+    <Property Name="RespondedAt" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="PollOption" Relationship="Self.FK__PollRespo__Optio__30F848ED" FromRole="PollResponses" ToRole="PollOptions" />
+    <NavigationProperty Name="Poll" Relationship="Self.FK__PollRespo__PollI__300424B4" FromRole="PollResponses" ToRole="Polls" />
+    <NavigationProperty Name="User" Relationship="Self.FK__PollRespo__UserI__2F10007B" FromRole="PollResponses" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Poll">
+    <Key>
+      <PropertyRef Name="PollID" />
+    </Key>
+    <Property Name="PollID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdminID" Type="Int32" />
+    <Property Name="Question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsClosed" Type="Boolean" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Admin" Relationship="Self.FK__Polls__AdminID__29572725" FromRole="Polls" ToRole="Admins" />
+    <NavigationProperty Name="PollOptions" Relationship="Self.FK__PollOptio__PollI__2C3393D0" FromRole="Polls" ToRole="PollOptions" />
+    <NavigationProperty Name="PollResponses" Relationship="Self.FK__PollRespo__PollI__300424B4" FromRole="Polls" ToRole="PollResponses" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdentityCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PollResponses" Relationship="Self.FK__PollRespo__UserI__2F10007B" FromRole="Users" ToRole="PollResponses" />
+  </EntityType>
+  <Association Name="FK__Polls__AdminID__29572725">
+    <End Role="Admins" Type="Self.Admin" Multiplicity="0..1" />
+    <End Role="Polls" Type="Self.Poll" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admins">
+        <PropertyRef Name="AdminID" />
+      </Principal>
+      <Dependent Role="Polls">
+        <PropertyRef Name="AdminID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollOptio__PollI__2C3393D0">
+    <End Role="Polls" Type="Self.Poll" Multiplicity="0..1" />
+    <End Role="PollOptions" Type="Self.PollOption" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Polls">
+        <PropertyRef Name="PollID" />
+      </Principal>
+      <Dependent Role="PollOptions">
+        <PropertyRef Name="PollID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollRespo__Optio__30F848ED">
+    <End Role="PollOptions" Type="Self.PollOption" Multiplicity="0..1" />
+    <End Role="PollResponses" Type="Self.PollRespons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PollOptions">
+        <PropertyRef Name="OptionID" />
+      </Principal>
+      <Dependent Role="PollResponses">
+        <PropertyRef Name="OptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollRespo__PollI__300424B4">
+    <End Role="Polls" Type="Self.Poll" Multiplicity="0..1" />
+    <End Role="PollResponses" Type="Self.PollRespons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Polls">
+        <PropertyRef Name="PollID" />
+      </Principal>
+      <Dependent Role="PollResponses">
+        <PropertyRef Name="PollID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollRespo__UserI__2F10007B">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="PollResponses" Type="Self.PollRespons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PollResponses">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EsemkaPollingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="PollOptions" EntityType="Self.PollOption" />
+    <EntitySet Name="PollResponses" EntityType="Self.PollRespons" />
+    <EntitySet Name="Polls" EntityType="Self.Poll" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__Polls__AdminID__29572725" Association="Self.FK__Polls__AdminID__29572725">
+      <End Role="Admins" EntitySet="Admins" />
+      <End Role="Polls" EntitySet="Polls" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollOptio__PollI__2C3393D0" Association="Self.FK__PollOptio__PollI__2C3393D0">
+      <End Role="Polls" EntitySet="Polls" />
+      <End Role="PollOptions" EntitySet="PollOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollRespo__Optio__30F848ED" Association="Self.FK__PollRespo__Optio__30F848ED">
+      <End Role="PollOptions" EntitySet="PollOptions" />
+      <End Role="PollResponses" EntitySet="PollResponses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollRespo__PollI__300424B4" Association="Self.FK__PollRespo__PollI__300424B4">
+      <End Role="Polls" EntitySet="Polls" />
+      <End Role="PollResponses" EntitySet="PollResponses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollRespo__UserI__2F10007B" Association="Self.FK__PollRespo__UserI__2F10007B">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="PollResponses" EntitySet="PollResponses" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

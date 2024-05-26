@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8B0FAFD-D2C8-455B-AB13-F4D1A8E9FD42}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EsemkaPolling</RootNamespace>
+    <AssemblyName>EsemkaPolling</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButtonUser.Designer.cs">
+      <DependentUpon>ButtonUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HalamanMasuk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HalamanMasuk.Designer.cs">
+      <DependentUpon>HalamanMasuk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HalamanUtama%28Admin%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HalamanUtama%28Admin%29.Designer.cs">
+      <DependentUpon>HalamanUtama%28Admin%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HalamanUtama%28User%29cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HalamanUtama%28User%29cs.Designer.cs">
+      <DependentUpon>HalamanUtama%28User%29cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan%28Admin%29cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan%28Admin%29cs.Designer.cs">
+      <DependentUpon>Laporan%28Admin%29cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaporanUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaporanUser.Designer.cs">
+      <DependentUpon>LaporanUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PemungutanSuara%28Admin%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PemungutanSuara%28Admin%29.Designer.cs">
+      <DependentUpon>PemungutanSuara%28Admin%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PemungutanSuara%28User%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PemungutanSuara%28User%29.Designer.cs">
+      <DependentUpon>PemungutanSuara%28User%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pengguna%28Admin%29cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengguna%28Admin%29cs.Designer.cs">
+      <DependentUpon>Pengguna%28Admin%29cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Poll.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PollOption.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PollRespons.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistAdmin.Designer.cs">
+      <DependentUpon>RegistAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistUsercs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistUsercs.Designer.cs">
+      <DependentUpon>RegistUsercs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ButtonUser.resx">
+      <DependentUpon>ButtonUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HalamanMasuk.resx">
+      <DependentUpon>HalamanMasuk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HalamanUtama%28Admin%29.resx">
+      <DependentUpon>HalamanUtama%28Admin%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HalamanUtama%28User%29cs.resx">
+      <DependentUpon>HalamanUtama%28User%29cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan%28Admin%29cs.resx">
+      <DependentUpon>Laporan%28Admin%29cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanUser.resx">
+      <DependentUpon>LaporanUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PemungutanSuara%28Admin%29.resx">
+      <DependentUpon>PemungutanSuara%28Admin%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PemungutanSuara%28User%29.resx">
+      <DependentUpon>PemungutanSuara%28User%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengguna%28Admin%29cs.resx">
+      <DependentUpon>Pengguna%28Admin%29cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegistAdmin.resx">
+      <DependentUpon>RegistAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistUsercs.resx">
+      <DependentUpon>RegistUsercs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Admin.datasource" />
+    <None Include="Properties\DataSources\EsemkaPolling.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\EsemkaPolling.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\EsemkaPollingEntities.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Poll.datasource" />
+    <None Include="Properties\DataSources\PollOption.datasource" />
+    <None Include="Properties\DataSources\PollRespons.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

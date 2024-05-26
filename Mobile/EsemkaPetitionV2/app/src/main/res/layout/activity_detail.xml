@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_Detail">
+
+    <androidx.appcompat.widget.Toolbar
+        app:navigationIcon="@drawable/btn_back"
+        app:titleTextColor="@color/white"
+        android:background="@color/toolbar"
+        android:id="@+id/detail_toolbar"
+        app:title="Esemka Petition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:id="@+id/Name_title"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:text="Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:text="Maker"
+            android:id="@+id/detail_creator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/detail_desc"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hewiuifieufidueudhfaudadsad"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/signed_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Signed By 400 People"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:layout_marginHorizontal="5dp"/>
+
+            <TextView
+                android:id="@+id/target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="937 To go"/>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginBottom="25sp"
+            android:id="@+id/singnIn"
+            android:backgroundTint="@color/Singn"
+            android:text="Singn in"
+            android:layout_marginHorizontal="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

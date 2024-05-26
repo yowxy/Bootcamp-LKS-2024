@@ -1,0 +1,6 @@
+@EsemkaHero_Spedtest_HostAddress = http://localhost:5273
+
+GET {{EsemkaHero_Spedtest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
